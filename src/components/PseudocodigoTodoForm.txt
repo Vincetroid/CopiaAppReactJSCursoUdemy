@@ -1,0 +1,37 @@
+importar React y Component desde react
+
+exportar una clase llamada TodoFrom que hereda de Componente
+	constructor para inicializar
+		super para que se puede usar la palabra this
+			se asigna al constructor una variable this llamada state
+				nuestro estado se llamara todo
+
+
+
+	updateTodo recibiendo un evento de entrada que sera un submit
+		asignar el estado
+			obtener el valor del evento y asignarlo a todo 
+
+
+
+
+	addTodo el cual recibe un evento como parametro
+		quitar el comportamiento predefinido del evento
+		?llamar a si misma la funcion asignandole lo que tiene todo actualmente
+
+	renderizar
+		asignar this.state a todo por facilidad
+		retornar
+			un formulario con evento submit que ejecuta addTodo con e
+				definir una fila
+					definir una columna
+						definir una capa con titulo
+						definir una entrada
+							de texto
+							con nombre de clase form-control
+							id todo
+							valor del input sera la var todo del constructor
+							evento que al cambiar la entrada de texto, se llame updateTodo para actualizar
+					definir columna
+						añadir boton submit
+							con leyenda añadir todo

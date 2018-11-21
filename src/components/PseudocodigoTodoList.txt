@@ -1,0 +1,41 @@
+importar React y Component desde react
+
+exportar la clase TodoItem que hereda de Component
+	constructor que recibe como parametros las propiedades que puede recibir el componente
+		usar super para poder usar this
+		obtener el texto que va dentro de una tag y asignarlo a todo
+
+
+
+
+	metodo onEditMode para el modo en edición
+		si se está en modo edicion
+			cte onUpdateTodo a la que se le asigna las propiedades
+			actualizar el todo que estamos editando
+		asignar el estado 
+			asignando editMode negado al mismo editMode
+
+
+
+
+	metodo handleChange para manejar el cambio en la entrada de texto
+		asignar a la propiedad todo el cambio
+
+
+
+	definir componentes react dinamicos en método dynamiComponentes
+		declarar variable local input y actionButton
+		definir constantes editMode y todo a traves de solo this.state
+
+		si se esta en modo edicion
+			se asigna la variable input
+				una entrada de texto con nombre de clase tal
+				valor el que tenga la prop todo
+				cada que cambia el input de texto se manda a llamar handleChange
+					a su vez este cambia el valor de todo
+
+			se asigna la variable actionButton
+				un boton que cada que se da click llama onEditMode con parametro this de lo que se tiene, actualiza todo
+
+		si no
+			asignar a la entrada de texto lo que tenga todo
